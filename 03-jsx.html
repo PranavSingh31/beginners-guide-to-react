@@ -3,9 +3,11 @@
   <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
-  <script type="text/babel">
+  <script type="text/babel"> // This allows us to use JSX
     const rootElement = document.getElementById('root')
-    const element = <div className="container">Hello World</div>
+    const element = <div className="container">Hello World</div> // This is the JSX code
     ReactDOM.render(element, rootElement)
   </script>
 </body>
+
+<!-- JSX is not used in production -->

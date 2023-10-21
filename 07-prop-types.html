@@ -14,10 +14,23 @@
         </div>
       )
     }
+
     SayHello.propTypes = {
       firstName: PropTypes.string.isRequired,
       lastName: PropTypes.string.isRequired,
+    } //this is used to check the type of the props
+
+    /*
+    SayHello.defaultProps = {
+      firstName(props, propName, componentName){
+        if(typeof props[propName] !== 'string'){
+          return new Error(`Hey, the ${propName} prop in ${componentName} is not a string.`)
+        }
+      } 
     }
+    */
+
+    //this defaultProps for so popular that React has a built-in way to do it, presernt at line 19 and 20
 
     const element = <SayHello firstName={false} />
 

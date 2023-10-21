@@ -1,13 +1,14 @@
 <body>
   <div id="root"></div>
-  <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script> <!-- to get react on the page -->
   <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
   <script type="text/javascript">
     const rootElement = document.getElementById('root')
-    const element = React.createElement('div', {
+    const element = React.createElement('div', { // Create a div element
       className: 'container',
-      children: 'Hello World',
-    })
-    ReactDOM.render(element, rootElement)
+      children: ['Hello World', React.createElement('div', null, 'Hello World')] //Element inside element
+      // children: 'Hello World',
+    }) //first argument is the type of element, second argument is the props, third argument is the children
+    ReactDOM.render(element, rootElement) // Render the element inside the root element
   </script>
 </body>
